@@ -16,10 +16,10 @@ import Not_Found from "./NotFound/Notfound"
 import Check_Auth from "./Components/common/Check-Auth"
 import Un_Auth from "./pages/un-auth page"
 import { useDispatch, useSelector } from "react-redux"
-import { Skeleton } from "@/components/ui/skeleton"
 import PaypalReturn from "./pages/Shop-view/paypal-return"
 import PaymentSuccess from "./pages/Shop-view/payment-success"
 import SearchProducts from "./Components/shopping-view/SearchProducts"
+import { Skeleton } from "./Components/ui/skeleton"
 
 
 function AllRoutes() {
