@@ -3,7 +3,7 @@ import { Button } from "@/Components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/Components/ui/dropdown-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet"
 import { shoppingViewHeaderMenuItems } from "@/config"
-import { logOut } from "@/store/authSlice"
+import { logOut, resetTokenAndCredentials } from "@/store/authSlice"
 import { HousePlug, LogOut, Menu, ShoppingCart, UserCog } from "lucide-react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom"
@@ -56,9 +56,12 @@ function HeaderRightContent() {
     const disPatch = useDispatch();
 
     const handleLogOut = () => {
-        disPatch(logOut()).then(() => {
-            toast.info('logOut successfully')
-        })
+        // disPatch(logOut()).then(() => {
+        //     toast.info('logOut successfully')
+        // })
+        disPatch(resetTokenAndCredentials())
+        sessionStorage.clear();
+        navigate('/auth/login');
     }
     useEffect(() => {
         disPatch(fetchCartDetails(user?.id))

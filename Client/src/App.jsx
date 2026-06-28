@@ -9,7 +9,8 @@ function App() {
 
 
     useEffect(()=>{
-        disPatch(authCheck())
+        const token = JSON.stringify(sessionStorage.getItem('token'));
+        disPatch(authCheck(token));
         
     },[disPatch])
 

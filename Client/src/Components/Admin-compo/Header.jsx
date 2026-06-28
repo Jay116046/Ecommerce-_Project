@@ -2,17 +2,21 @@ import { LogOut, AlignJustify } from "lucide-react"
 import { Button } from "../ui/button"
 import { useDispatch } from "react-redux"
 import { toast } from "sonner";
-import { logOut } from "@/store/authSlice";
+import { logOut, resetTokenAndCredentials } from "@/store/authSlice";
+import { useNavigate } from "react-router-dom";
 
 function Admin_Header({ setopenSidebar }) {
 
     const disPatch = useDispatch();
-
+    const navigate = useNavigate();
 
     const handleLogOut = () => {
-        disPatch(logOut()).then(() => {
-            toast.info('logOut successfully')
-        })
+        // disPatch(logOut()).then(() => {
+        //     toast.info('logOut successfully')
+        // })
+        disPatch(resetTokenAndCredentials())
+        sessionStorage.clear();
+        navigate('/auth/login');
     }
 
 

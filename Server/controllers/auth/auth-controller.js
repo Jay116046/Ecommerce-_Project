@@ -72,15 +72,28 @@ export const login =async (req,res)=>{
         },'CLIENT_SECRET_KEY',{expiresIn:'60m'})
 
 
-        res.cookie('token',token,{httpOnly:true,secure:false}).json({
+        // res.cookie('token',token,{httpOnly:true,secure:true}).json({
+        //     success:true,
+        //     message:'successfully logged-in',
+        //     user:{
+        //         email:checkUser.email,
+        //         id:checkUser._id,
+        //         roll:checkUser.roll,
+        //         userName:checkUser.userName
+        //     }
+        // })
+
+
+        res.status(200).json({
             success:true,
             message:'successfully logged-in',
+            token,
             user:{
                 email:checkUser.email,
                 id:checkUser._id,
                 roll:checkUser.roll,
                 userName:checkUser.userName
-            }
+            } 
         })
 
 
@@ -107,9 +120,37 @@ export const logout = (req,res)=>{
 
 // authcheck
 
-export const authmiddleware = (req,res,next)=>{
-    const token = req.cookies.token;
+// export const authmiddleware = (req,res,next)=>{
+//     const token = req.cookies.token;
     
+//     // console.log(token);
+//     if(!token){        
+//         res.status(401).json({
+//             success:false,
+//             message:"unauthorized user"
+//         })
+//     }
+
+
+//     try{
+//         const decoded = jsonwebtoken.verify(token,'CLIENT_SECRET_KEY');
+//         req.user = decoded;
+//         next();
+//     }catch(e){
+//         res.status(401).json({
+//             success:false,
+//             message:"unauthorized user"
+//         })
+//     }
+
+// }
+
+
+export const authmiddleware = (req,res,next)=>{
+
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+
     // console.log(token);
     if(!token){        
         res.status(401).json({
@@ -131,6 +172,4 @@ export const authmiddleware = (req,res,next)=>{
     }
 
 }
-
-
 
