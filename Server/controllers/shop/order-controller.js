@@ -1,3 +1,7 @@
+import dotenv from "dotenv"
+
+dotenv.config();
+
 import paypal from "../../helpers/paypal.js";
 import CartModel from "../../model/Cart.js";
 import Order from "../../model/Order.js";

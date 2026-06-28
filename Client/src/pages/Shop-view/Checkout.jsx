@@ -64,7 +64,7 @@ function Shop_Checkout() {
             payerId: ''
         }
 
-        console.log(orderData);
+        // console.log(orderData);
 
         disPatch(createNewOrder(orderData)).then((data) => {
             // console.log(data);
