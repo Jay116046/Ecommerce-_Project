@@ -7,6 +7,7 @@ import { Button } from '@/Components/ui/button';
 import { useState } from 'react';
 import { createNewOrder } from '@/store/shop/order-slice';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 function Shop_Checkout() {
 
@@ -15,6 +16,7 @@ function Shop_Checkout() {
     const { approvalUrl } = useSelector(state => state.shopOrder)
     const [currentSelectAddress, setcurrentSelectAddress] = useState(null);
     const [isPaymentStart, setIsPaymentStart] = useState(false);
+    const navigate = useNavigate();
 
     const disPatch = useDispatch();
 
@@ -81,7 +83,8 @@ function Shop_Checkout() {
     // console.log(currentSelectAddress);
 
     if (approvalUrl) {
-        window.location.href = approvalUrl;
+        // window.location.href = approvalUrl;
+        navigate(approvalUrl);
     }
 
 
