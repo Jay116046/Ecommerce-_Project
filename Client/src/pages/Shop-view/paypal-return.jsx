@@ -19,9 +19,12 @@ function PaypalReturn() {
 
         disPatch(capturePayment({paymentId, payerId, orderId })).then((data)=>{
             console.log(data);
-            if(data?.payload?.success){
+            if(data?.payload?.success==true){
                 sessionStorage.removeItem("CurrentOrderId");
                 window.location.href = "/shop/payment-success";
+            }
+            else{
+                window.location.href = "/shop/home";
             }
         })
 

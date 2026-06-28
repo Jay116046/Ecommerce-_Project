@@ -83,8 +83,8 @@ function Shop_Checkout() {
     // console.log(currentSelectAddress);
 
     if (approvalUrl) {
-        // window.location.href = approvalUrl;
-        navigate(approvalUrl);
+        window.location.href = approvalUrl;
+        // navigate(approvalUrl);
     }
 
 
