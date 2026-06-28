@@ -2,34 +2,34 @@ import * as React from "react"
 import { Dialog as SheetPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import {Button}  from "@/components/ui/button"
 import { XIcon } from "lucide-react"
 
-function Sheet({
+export function Sheet({
   ...props
 }) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />;
 }
 
-function SheetTrigger({
+export function SheetTrigger({
   ...props
 }) {
   return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
 }
 
-function SheetClose({
+export function SheetClose({
   ...props
 }) {
   return <SheetPrimitive.Close data-slot="sheet-close" {...props} />;
 }
 
-function SheetPortal({
+export function SheetPortal({
   ...props
 }) {
   return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />;
 }
 
-function SheetOverlay({
+export function SheetOverlay({
   className,
   ...props
 }) {
@@ -44,7 +44,7 @@ function SheetOverlay({
   );
 }
 
-function SheetContent({
+export function SheetContent({
   className,
   children,
   side = "right",
@@ -76,7 +76,7 @@ function SheetContent({
   );
 }
 
-function SheetHeader({
+export function SheetHeader({
   className,
   ...props
 }) {
@@ -88,7 +88,7 @@ function SheetHeader({
   );
 }
 
-function SheetFooter({
+export function SheetFooter({
   className,
   ...props
 }) {
@@ -100,7 +100,7 @@ function SheetFooter({
   );
 }
 
-function SheetTitle({
+export function SheetTitle({
   className,
   ...props
 }) {
@@ -112,7 +112,7 @@ function SheetTitle({
   );
 }
 
-function SheetDescription({
+export function SheetDescription({
   className,
   ...props
 }) {
@@ -124,13 +124,13 @@ function SheetDescription({
   );
 }
 
-export {
-  Sheet,
-  SheetTrigger,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
-  SheetDescription,
-}
+// export default {
+//   Sheet,
+//   SheetTrigger,
+//   SheetClose,
+//   SheetContent,
+//   SheetHeader,
+//   SheetFooter,
+//   SheetTitle,
+//   SheetDescription,
+// }

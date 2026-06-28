@@ -2,34 +2,34 @@ import * as React from "react"
 import { Dialog as DialogPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import {Button}  from "@/components/ui/button"
 import { XIcon } from "lucide-react"
 
-function Dialog({
+export function Dialog({
   ...props
 }) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />;
 }
 
-function DialogTrigger({
+export function DialogTrigger({
   ...props
 }) {
   return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />;
 }
 
-function DialogPortal({
+export function DialogPortal({
   ...props
 }) {
   return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />;
 }
 
-function DialogClose({
+export function DialogClose({
   ...props
 }) {
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />;
 }
 
-function DialogOverlay({
+export function DialogOverlay({
   className,
   ...props
 }) {
@@ -44,7 +44,7 @@ function DialogOverlay({
   );
 }
 
-function DialogContent({
+export function DialogContent({
   className,
   children,
   showCloseButton = true,
@@ -74,7 +74,7 @@ function DialogContent({
   );
 }
 
-function DialogHeader({
+export function DialogHeader({
   className,
   ...props
 }) {
@@ -86,7 +86,7 @@ function DialogHeader({
   );
 }
 
-function DialogFooter({
+export function DialogFooter({
   className,
   showCloseButton = false,
   children,
@@ -110,7 +110,7 @@ function DialogFooter({
   );
 }
 
-function DialogTitle({
+export function DialogTitle({
   className,
   ...props
 }) {
@@ -122,7 +122,7 @@ function DialogTitle({
   );
 }
 
-function DialogDescription({
+export function DialogDescription({
   className,
   ...props
 }) {
@@ -137,15 +137,15 @@ function DialogDescription({
   );
 }
 
-export {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogOverlay,
-  DialogPortal,
-  DialogTitle,
-  DialogTrigger,
-}
+// export default {
+//   Dialog,
+//   DialogClose,
+//   DialogContent,
+//   DialogDescription,
+//   DialogFooter,
+//   DialogHeader,
+//   DialogOverlay,
+//   DialogPortal,
+//   DialogTitle,
+//   DialogTrigger,
+// }

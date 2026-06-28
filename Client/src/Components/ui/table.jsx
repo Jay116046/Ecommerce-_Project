@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-function Table({
+export function Table({
   className,
   ...props
 }) {
@@ -16,7 +16,7 @@ function Table({
   );
 }
 
-function TableHeader({
+export function TableHeader({
   className,
   ...props
 }) {
@@ -28,7 +28,7 @@ function TableHeader({
   );
 }
 
-function TableBody({
+export function TableBody({
   className,
   ...props
 }) {
@@ -40,7 +40,7 @@ function TableBody({
   );
 }
 
-function TableFooter({
+export function TableFooter({
   className,
   ...props
 }) {
@@ -52,7 +52,7 @@ function TableFooter({
   );
 }
 
-function TableRow({
+export function TableRow({
   className,
   ...props
 }) {
@@ -67,7 +67,7 @@ function TableRow({
   );
 }
 
-function TableHead({
+export function TableHead({
   className,
   ...props
 }) {
@@ -82,7 +82,7 @@ function TableHead({
   );
 }
 
-function TableCell({
+export function TableCell({
   className,
   ...props
 }) {
@@ -97,7 +97,7 @@ function TableCell({
   );
 }
 
-function TableCaption({
+export function TableCaption({
   className,
   ...props
 }) {
@@ -109,13 +109,13 @@ function TableCaption({
   );
 }
 
-export {
-  Table,
-  TableHeader,
-  TableBody,
-  TableFooter,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableCaption,
-}
+// export default{
+//   Table,
+//   TableHeader,
+//   TableBody,
+//   TableFooter,
+//   TableHead,
+//   TableRow,
+//   TableCell,
+//   TableCaption,
+// }

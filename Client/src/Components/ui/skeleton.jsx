@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 
-function Skeleton({
+export function Skeleton({
   className,
   ...props
 }) {
@@ -12,4 +12,4 @@ function Skeleton({
   );
 }
 
-export default Skeleton
+// export default Skeleton

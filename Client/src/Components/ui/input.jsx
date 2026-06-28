@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-function Input({
+export function Input({
   className,
   disabled,
   type,
@@ -21,4 +21,4 @@ function Input({
   );
 }
 
-export { Input }
+// export default  Input 

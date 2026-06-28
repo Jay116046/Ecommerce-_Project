@@ -3,7 +3,7 @@ import { Avatar as AvatarPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
 
-function Avatar({
+export function Avatar({
   className,
   size = "default",
   ...props
@@ -20,7 +20,7 @@ function Avatar({
   );
 }
 
-function AvatarImage({
+export function AvatarImage({
   className,
   ...props
 }) {
@@ -32,7 +32,7 @@ function AvatarImage({
   );
 }
 
-function AvatarFallback({
+export function AvatarFallback({
   className,
   ...props
 }) {
@@ -47,7 +47,7 @@ function AvatarFallback({
   );
 }
 
-function AvatarBadge({
+export function AvatarBadge({
   className,
   ...props
 }) {
@@ -65,7 +65,7 @@ function AvatarBadge({
   );
 }
 
-function AvatarGroup({
+export function AvatarGroup({
   className,
   ...props
 }) {
@@ -80,7 +80,7 @@ function AvatarGroup({
   );
 }
 
-function AvatarGroupCount({
+export function AvatarGroupCount({
   className,
   ...props
 }) {
@@ -95,11 +95,11 @@ function AvatarGroupCount({
   );
 }
 
-export {
-  Avatar,
-  AvatarImage,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarGroupCount,
-  AvatarBadge,
-}
+// export default {
+//   Avatar,
+//   AvatarImage,
+//   AvatarFallback,
+//   AvatarGroup,
+//   AvatarGroupCount,
+//   AvatarBadge,
+// }
