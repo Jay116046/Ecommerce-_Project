@@ -54,6 +54,8 @@ export const logOut = createAsyncThunk('/auth/logout',
 
 export const authCheck = createAsyncThunk('/auth/authcheck',
     async (token)=>{
+        // console.log(token);
+        
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/authcheck`,{
             headers:{
                 Authorization:`Bearer ${token}`,
@@ -61,6 +63,7 @@ export const authCheck = createAsyncThunk('/auth/authcheck',
                 Expires:'0'
             }
         })
+        
     return response.data
     }
 )

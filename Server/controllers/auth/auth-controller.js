@@ -151,7 +151,7 @@ export const authmiddleware = (req,res,next)=>{
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
 
-    // console.log(token);
+    // console.log(token[0]);
     if(!token){        
         res.status(401).json({
             success:false,
@@ -162,6 +162,8 @@ export const authmiddleware = (req,res,next)=>{
 
     try{
         const decoded = jsonwebtoken.verify(token,'CLIENT_SECRET_KEY');
+        // console.log("decoded",decoded);
+        
         req.user = decoded;
         next();
     }catch(e){

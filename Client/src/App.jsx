@@ -9,10 +9,11 @@ function App() {
 
 
     useEffect(()=>{
-        const token = JSON.stringify(sessionStorage.getItem('token'));
-        disPatch(authCheck(token));
+        const token = JSON.parse(sessionStorage.getItem('token'));
+        // console.log(token);
         
-    },[disPatch])
+        disPatch(authCheck(token));
+    },[])
 
   return (
     <>
