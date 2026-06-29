@@ -23,7 +23,7 @@ function Admin_Header({ setopenSidebar }) {
     return (
         <>
             <div className="flex  items-center justify-between px-4 py-3 ">
-                <Button onClick={() => setopenSidebar(true)} className='lg:hidden sm:block bg-black text-white'>
+                <Button onClick={() => setopenSidebar(true)} className='xl:hidden sm:block bg-black text-white'>
                     <AlignJustify />
                     <span className="sr-only">side-menu</span>
                 </Button>

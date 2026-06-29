@@ -93,7 +93,7 @@ function CommonForm({ formControls, formData, setFormData, onSubmit, buttonText,
 
     return (
         <>
-            <form action="" onSubmit={onSubmit}>
+            <form action="" onSubmit={onSubmit} className="p-2">
 
                 <div className="flex flex-col gap-3">
                     {

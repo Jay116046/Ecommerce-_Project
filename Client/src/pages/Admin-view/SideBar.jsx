@@ -83,7 +83,7 @@ function SideBar({ open, onOpenChange }) {
                     </SheetContent>
                 </Sheet>
 
-                <aside className="hidden w-64 flex-col border-r bg-slate-200 p-3 lg:flex ">
+                <aside className="hidden w-64 flex-col border-r bg-slate-200 p-3 xl:flex ">
                     <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/admin/dashboard')}>
                         <ChartNoAxesCombined />
                         <h1 className="text-2xl font-extrabold">Admin Panel</h1>

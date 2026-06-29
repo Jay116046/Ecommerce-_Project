@@ -98,7 +98,7 @@ function Shop_Checkout() {
                         className="h-full w-full object-cover object-center"
                     />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5 p-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5 p-5">
                     <Address selectedId={currentSelectAddress?._id} setcurrentSelectAddress={setcurrentSelectAddress} />
                     <div className="flex flex-col gap-4">
                         {

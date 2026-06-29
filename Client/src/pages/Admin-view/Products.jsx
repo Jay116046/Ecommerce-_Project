@@ -80,13 +80,13 @@ function Products() {
     return (
         <>
             <Fragment>
-                <div className="flex  mb-5 w-full justify-end ">
+                <div className="flex mb-5 w-full justify-end ">
                     <Button onClick={() => setOpenCreateProductDialog(true)} className='bg-black text-white'>
                         Add product
                     </Button>
 
                 </div>
-                <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 items-center justify-center">
                     {
                         productList && productList.length > 0
                             ? productList.map((product, idx) => (
