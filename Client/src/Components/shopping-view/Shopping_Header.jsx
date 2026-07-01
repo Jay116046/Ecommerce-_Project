@@ -33,15 +33,17 @@ function MenuItems() {
     }
 
     return <>
-        <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
+        <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row p-4 pt-12">
             {
                 shoppingViewHeaderMenuItems.map((menuItem) => (
+                    <>
                     <Label
                         onClick={() => handleNavigate(menuItem, "category")}
                         key={menuItem.id}
-                        className="text-lg font-medium cursor-pointer">
+                        className="text-lg font-medium cursor-pointer border-b-2 ">
                         {menuItem.label}
                     </Label>
+                    </>
                 ))
             }
         </nav>
@@ -132,7 +134,7 @@ function Shopping_Header() {
                             <span className="sr-only">Toggle header menu</span>
                         </Button>
                     </SheetTrigger>
-                    <SheetContent side="right" className="w-full max-w-xs p-2 bg-slate-200">
+                    <SheetContent side="right" className="w-full max-w-xs p-2 bg-slate-50">
                         <MenuItems />
                     </SheetContent>
                 </Sheet>
