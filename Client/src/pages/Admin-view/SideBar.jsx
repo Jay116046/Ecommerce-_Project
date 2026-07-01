@@ -48,7 +48,7 @@ function AdminMenu({setOpen}) {
                                 navigate(item.path)
                                 setOpen? setOpen(false):null
                         }} className="cursor-pointer text-lg flex items-center gap-2 rounded-md m-1 px-3 py-2
-                                text-muted-foreground  hover:bg-slate-100  hover:font-semibold">
+                                    text-muted-foreground  hover:bg-slate-100 hover:text-black  hover:font-semibold border-b-2 border-slate-100">
                             {item.icon}
                             {item.label}
                         </div>
@@ -69,7 +69,7 @@ function SideBar({ open, onOpenChange }) {
             <Fragment>
                 <Sheet open={open} onOpenChange={onOpenChange}>
 
-                    <SheetContent side="left" className='w-64 bg-slate-200' >
+                    <SheetContent side="left" className='w-64 bg-black text-white' >
 
                         <div className="flex flex-col h-full">
                             <SheetHeader className='border-b'>
@@ -83,7 +83,7 @@ function SideBar({ open, onOpenChange }) {
                     </SheetContent>
                 </Sheet>
 
-                <aside className="hidden w-64 flex-col border-r bg-slate-200 p-3 xl:flex ">
+                <aside className="hidden w-64 flex-col border-r bg-black text-white p-3 xl:flex ">
                     <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/admin/dashboard')}>
                         <ChartNoAxesCombined />
                         <h1 className="text-2xl font-extrabold">Admin Panel</h1>

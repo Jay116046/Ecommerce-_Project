@@ -18,7 +18,15 @@ export const addFeature = createAsyncThunk('/common/addFeature',
 export const getFeatures = createAsyncThunk('/common/getFeatures',
     async () => {
         const result = await axios.get(`${import.meta.env.VITE_API_URL}/api/common/feature/getFeature`);
-        console.log(result);
+        // console.log(result);
+        return result?.data;
+    }
+)
+
+export const deleteFeatures = createAsyncThunk('/common/deleteFeature/:id',
+    async (id) => {
+        const result = await axios.get(`${import.meta.env.VITE_API_URL}/api/common/feature/deleteFeature/${id}`);
+        // console.log(result);
         return result?.data;
     }
 )

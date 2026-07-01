@@ -42,3 +42,22 @@ export const getFeature = async (req, res) => {
         })
     }
 }
+
+export const deleteFeature = async (req, res) => {
+    try {
+        const {id} = req.params;
+
+        const result =await FeatureModel.findByIdAndDelete(id);
+
+        res.status(200).json({
+            success:true,
+            data:result
+        })
+
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            msg: "some error occured!!"
+        })
+    }
+}

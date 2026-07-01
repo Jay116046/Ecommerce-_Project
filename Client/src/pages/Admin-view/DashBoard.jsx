@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ProductImageUpload from "./ProductImageUpload";
 import { Button } from "@/Components/ui/button";
 import { useDispatch, useSelector } from "react-redux";
-import { addFeature, getFeatures } from "@/store/common/featureSlice";
+import { addFeature, deleteFeatures, getFeatures } from "@/store/common/featureSlice";
 import { toast } from "sonner";
 
 function DashBoard() {
@@ -26,12 +26,27 @@ function DashBoard() {
                 // console.log(data.payload.success);
                 if(data.payload.success){
                 toast.info("image add successfully");
+                disPatch(getFeatures());
+                setUploadImageUrl("");
+                setImageFile(null);
                 }
             })
         }
         else{
             toast.info("please add feature image");
         }
+    }
+
+    const handleDelete = (id)=>{
+        // console.log(id);
+        disPatch(deleteFeatures(id)).then((res)=>{
+            // console.log(res);
+            if(res.payload.success){
+                toast.info("delete feture success fully")
+                disPatch(getFeatures())
+            }
+        })
+
     }
 
     return (
@@ -60,6 +75,7 @@ function DashBoard() {
                             className="w-full h-[300px] object-cover rounded-lg" 
                             src={item?.image} 
                             alt="" />
+                            <Button className="absolute top-1 right-1 bg-white text-black font-bold" onClick={()=>handleDelete(item?._id)}>Delete</Button>
                         </div>
                     )): <h1>no feature found</h1>
                 }

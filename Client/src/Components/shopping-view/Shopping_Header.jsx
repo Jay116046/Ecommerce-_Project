@@ -40,7 +40,7 @@ function MenuItems() {
                     <Label
                         onClick={() => handleNavigate(menuItem, "category")}
                         key={menuItem.id}
-                        className="text-lg font-medium cursor-pointer border-b-2 ">
+                        className="text-lg font-medium cursor-pointer">
                         {menuItem.label}
                     </Label>
                     </>

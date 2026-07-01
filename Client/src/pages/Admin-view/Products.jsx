@@ -109,7 +109,7 @@ function Products() {
                     setFormData(initialFormData)
                 }}>
 
-                    <SheetContent side="right" className="overflow-auto bg-slate-300">
+                    <SheetContent side="right" className="overflow-auto bg-slate-100">
 
 
                         <SheetTitle className="p-2 text-xl font-bold text-center">Add new Product </SheetTitle>
